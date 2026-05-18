@@ -1,0 +1,17 @@
+target/
+*.jar
+*.war
+.DS_Store
+
+.project
+.classpath
+.settings/
+
+.idea/
+*.iml
+
+node_modules/
+dist/
+build/
+
+.env
