@@ -48,7 +48,7 @@ document.getElementById("editDiaryForm").addEventListener("submit", function(eve
         userId: userId
     };
 
-	fetch(`http://3.23.63.72:8080/api/diaries/update/${diaryId}`, {
+	fetch(`http://18.217.146.144:8080/api/diaries/update/${diaryId}`, {
 	    method: "PUT",
 	    headers: {
 	        "Content-Type": "application/json",

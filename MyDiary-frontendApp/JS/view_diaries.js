@@ -6,7 +6,7 @@ if (!userId || !token) {
     window.location.href = "login.html";
 }
 
-fetch(`http://3.23.63.72:8080/api/diaries/user/${userId}`, {
+fetch(`http://18.217.146.144:8080/api/diaries/user/${userId}`, {
     method: "GET",
     headers: {
         "Authorization": "Bearer " + token
@@ -59,7 +59,7 @@ function deleteDiary(id) {
         return;
     }
 
-	fetch(`http://3.23.63.72:8080/api/diaries/delete/${id}`, {
+	fetch(`http://18.217.146.144:8080/api/diaries/delete/${id}`, {
 	    method: "DELETE",
 	    headers: {
 	        "Authorization": "Bearer " + token
