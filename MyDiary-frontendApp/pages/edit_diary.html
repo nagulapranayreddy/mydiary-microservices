@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Diary</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 450px;
+            background-color: white;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: gray;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Edit Diary</h2>
+
+    <form id="editDiaryForm">
+        <label>Title</label>
+        <input type="text" id="title">
+
+        <label>Content</label>
+        <textarea id="content"></textarea>
+
+        <button type="submit">Update Diary</button>
+    </form>
+
+    <a href="view_diaries.html">Back to Diaries</a>
+</div>
+
+<script src="../JS/edit_diary.js"></script>
+
+</body>
+</html>

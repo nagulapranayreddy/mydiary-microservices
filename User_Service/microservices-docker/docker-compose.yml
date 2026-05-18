@@ -1,0 +1,60 @@
+services:
+
+  user-mysql:
+    image: mysql:8
+    container_name: user-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: userdb
+    ports:
+      - "3307:3306"
+
+  diary-mysql:
+    image: mysql:8
+    container_name: diary-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: diarydb
+    ports:
+      - "3308:3306"
+
+  user-service:
+    image: user-service:latest
+    container_name: user-service
+    restart: on-failure
+    depends_on:
+      - user-mysql
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://user-mysql:3306/userdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+
+  diary-service:
+    image: diary-service:latest
+    container_name: diary-service
+    restart: on-failure
+    depends_on:
+      - diary-mysql
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://diary-mysql:3306/diarydb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+
+  api-gateway:
+    image: api-gateway:latest
+    container_name: api-gateway
+    depends_on:
+      - user-service
+      - diary-service
+    ports:
+      - "8080:8080"
+
+  frontend:
+    image: mydiary-frontend:latest
+    container_name: mydiary-frontend
+    ports:
+      - "3000:80"

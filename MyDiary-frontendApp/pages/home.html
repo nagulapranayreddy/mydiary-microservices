@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 400px;
+            background-color: white;
+            margin: 120px auto;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Welcome to My Diary App</h2>
+    <p>What would you like to do today?</p>
+
+    <button onclick="goToAddDiary()">Add New Diary</button>
+    <button onclick="goToViewDiaries()">View My Diaries</button>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script src="../JS/home.js"></script>
+
+</body>
+</html>
