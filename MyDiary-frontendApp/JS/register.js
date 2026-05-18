@@ -19,7 +19,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         password: password
     };
 
-    fetch("http://localhost:8080/api/users/register", {
+    fetch("http://3.23.63.72:8080/api/users/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

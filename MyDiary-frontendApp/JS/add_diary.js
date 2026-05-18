@@ -18,7 +18,7 @@ document.getElementById("diaryForm").addEventListener("submit", function(event) 
         userId: userId
     };
 
-    fetch("http://localhost:8080/api/diaries/add", {
+    fetch("http://3.23.63.72:8080/api/diaries/add", {
         method: "POST",
 		headers: {
 		    "Content-Type": "application/json",

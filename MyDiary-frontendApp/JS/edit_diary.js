@@ -15,7 +15,7 @@ if (!diaryId) {
     window.location.href = "view_diaries.html";
 }
 
-	fetch(`http://localhost:8080/api/diaries/${diaryId}`, {
+	fetch(`http://3.23.63.72:8080/api/diaries/${diaryId}`, {
 	    method: "GET",
 	    headers: {
 	        "Authorization": "Bearer " + token
@@ -48,7 +48,7 @@ document.getElementById("editDiaryForm").addEventListener("submit", function(eve
         userId: userId
     };
 
-	fetch(`http://localhost:8080/api/diaries/update/${diaryId}`, {
+	fetch(`http://3.23.63.72:8080/api/diaries/update/${diaryId}`, {
 	    method: "PUT",
 	    headers: {
 	        "Content-Type": "application/json",
